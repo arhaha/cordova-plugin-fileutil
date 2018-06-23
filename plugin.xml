@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.matrixgz.cordova.plugin.fileutil" version="1.0.0" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>FileUtil</name>
+    <js-module name="FileUtil" src="www/FileUtil.js">
+        <clobbers target="cordova.plugins.FileUtil" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="FileUtil">
+                <param name="android-package" value="com.matrixgz.cordova.plugin.FileUtil" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/FileUtil.java" target-dir="src/com/matrixgz/cordova/plugin/FileUtil" />
+    </platform>
+</plugin>
