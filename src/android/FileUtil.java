@@ -41,7 +41,7 @@ public class FileUtil extends CordovaPlugin {
         byte[] bytesArray = null;
 
         try {
-            File file = new File(filePath);
+            File file = new File(stripFileProtocol(filePath));
             bytesArray = new byte[(int) file.length()];
 
             //read file into bytes[]
@@ -63,5 +63,12 @@ public class FileUtil extends CordovaPlugin {
 
         return bytesArray;
 
+    }
+
+    public static String stripFileProtocol(String uriString) {
+        if (uriString.startsWith("file://")) {
+            uriString = uriString.substring(7);
+        }
+        return uriString;
     }
 }
