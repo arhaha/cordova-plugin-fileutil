@@ -1,6 +1,6 @@
 {
   "name": "com.matrixgz.cordova-plugin-fileutil",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Matrixgz Cordova Plugin FileUtil",
   "main": "index.js",
   "scripts": {
